@@ -8,6 +8,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-app.listen(PORT, () => {
+app.listen( () => {
     console.log(`Server is running on https://wolfan00.github.io/NarinGece`);
 });
