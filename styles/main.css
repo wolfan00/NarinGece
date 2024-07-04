@@ -29,6 +29,26 @@ nav ul li a {
 main {
     padding: 20px;
 }
+instagram{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    
+}
+instagram a{
+    display: contents;
+    padding: auto;
+    border: #333 solid;
+}
+instagram a img{
+    width: 200px;
+}
+instagram a img:hover{
+    transition: 0.5s;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 150px;
+}
 
 footer {
     background-color: #333;
