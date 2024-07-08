@@ -44,12 +44,12 @@ function checkedCookie(){
     }
 }
 let checkedCookieForHassasIcerik = function(){
-    if(getCookie("hassasIcerik")=="true"){
+    if(document.cookie == "hassas"){
         document.getElementById("a").innerHTML = "<iframe src='https://www.youtube.com/embed/leIK1aUOF-Q?wmode=opaque' width='300' height='300' frameborder='0' ' ></iframe>";
     }
 }
 function cookieHassasIcerik(a){
-    document.cookie = "hassasIcerik=true;";
+    document.cookie = "hassas";
     document.getElementById(a).innerHTML = "<iframe src='https://www.youtube.com/embed/leIK1aUOF-Q?wmode=opaque' width='300' height='300' frameborder='0' ' ></iframe>";
 }
 checkedCookieForHassasIcerik();
