@@ -51,8 +51,16 @@ function checkedCookie(){
         }
     }
 }
+function hasSplit(içerik){
+  let b = document.cookie.split(";")
+      for(i=0;i<b.length;i++){
+        if(b[i]=="içerik"){
+          return true;
+        }
+      }return false}
 let checkedCookieForHassasIcerik = function(){
-    if(document.cookie == "hassas"){
+  
+    if(hasSplit("hassas")){
         document.getElementById("a").innerHTML = "<iframe src='https://www.youtube.com/embed/leIK1aUOF-Q?wmode=opaque' width='300' height='300' frameborder='0' ' ></iframe>";
     }
 }
@@ -61,8 +69,5 @@ function cookieHassasIcerik(a){
     document.getElementById(a).innerHTML = "<iframe src='https://www.youtube.com/embed/leIK1aUOF-Q?wmode=opaque' width='300' height='300' frameborder='0' ' ></iframe>";
 }
 checkedCookieForHassasIcerik();
-document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
-let x = document.cookie;
-alert(document.cookie);
 </script>
 </html>
