@@ -10,6 +10,14 @@
     margin: 140px;
 }
 </style>
+
+
+<body style='text-align: center; color: rgb(0, 0, 0); background-color: rgba(255, 123, 0, 0.377); font-family: fantasy;font-size: xxx-large;padding: 350px;'>
+<div id="a" style="width: 300; height: 300; display: flex; align-items: center;justify-content: center; ">
+<button id="button" onclick="cookieHassasIcerik('a')"  >Hassas İçerik</button>
+</div>
+
+</body>
 <script type='text/javascript' language='javascript'>
     function setCookie(cname, cvalue, exdays) {
   const d = new Date();
@@ -53,12 +61,8 @@ function cookieHassasIcerik(a){
     document.getElementById(a).innerHTML = "<iframe src='https://www.youtube.com/embed/leIK1aUOF-Q?wmode=opaque' width='300' height='300' frameborder='0' ' ></iframe>";
 }
 checkedCookieForHassasIcerik();
+document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+let x = document.cookie;
+alert(document.cookie());
 </script>
-
-<body style='text-align: center; color: rgb(0, 0, 0); background-color: rgba(255, 123, 0, 0.377); font-family: fantasy;font-size: xxx-large;padding: 350px;'>
-<div id="a" style="width: 300; height: 300; display: flex; align-items: center;justify-content: center; ">
-<button id="button" onclick="cookieHassasIcerik('a')"  >Hassas İçerik</button>
-</div>
-
-</body>
 </html>
