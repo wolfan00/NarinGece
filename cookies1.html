@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='tr-TR'>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+<title>Döküman İsmi</title>
+
+</head>
+<style type="text/css" language="css">
+#button{
+    margin: 140px;
+}
+</style>
+<script type='text/javascript' language='javascript'>
+    function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function checkedCookie(){
+    let username = getCookie("username");
+    if(username !=""){
+        alert("Tekrardan Hoşgeldin "+username);
+    }else{
+        username = prompt("Lütfen İsminizi Girin: ","");
+        if(username != "" && username != null){
+            setCookie("username",username,365);
+        }
+    }
+}
+let checkedCookieForHassasIcerik = function(){
+    if(document.getCookie("hassasIcerik")=="true"){
+        document.getElementById(a).innerHTML = "<iframe src='https://www.youtube.com/embed/leIK1aUOF-Q?wmode=opaque' width='300' height='300' frameborder='0' ' ></iframe>";
+    }
+}
+function cookieHassasIcerik(a){
+    document.cookie = "hassasIcerik=true;";
+    document.getElementById(a).innerHTML = "<iframe src='https://www.youtube.com/embed/leIK1aUOF-Q?wmode=opaque' width='300' height='300' frameborder='0' ' ></iframe>";
+}
+</script>
+
+<body style='text-align: center; color: rgb(0, 0, 0); background-color: rgba(255, 123, 0, 0.377); font-family: fantasy;font-size: xxx-large;padding: 350px;'>
+<div id="a" style="width: 300; height: 300; display: flex; align-items: center;justify-content: center; ">
+<button id="button" onclick="cookieHassasIcerik('a')"  >Hassas İçerik</button>
+</div>
+
+</body>
+</html>
